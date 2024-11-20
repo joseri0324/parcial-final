@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Planificación de Tareas</title>
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <h1>Sistema de Planificación de Tareas</h1>
+    
+    <h2>Simulación de Entrevista</h2>
+    <div id="entrevista"></div>
+    
+    <h2>Agregar Tarea</h2>
+    <form id="formAgregarTarea">
+        <label for="descripcion">Descripción:</label>
+        <input type="text" id="descripcion" required>
+        
+        <label for="fecha">Fecha:</label>
+        <input type="date" id="fecha" required>
+        
+        <label for="estado">Estado:</label>
+        <select id="estado" required>
+            <option value="pendiente">Pendiente</option>
+            <option value="en progreso">En Progreso</option>
+            <option value="completada">Completada</option>
+            <option value="atrasada">Atrasada</option>
+        </select>
+        
+        <button type="submit">Agregar Tarea</button>
+    </form>
+    
+    <h2>Lista de Tareas</h2>
+    <div id="listaTareas"></div>
+    
+    <h2>Cambiar Estado de Tarea</h2>
+    <form id="formCambiarEstado">
+        <label for="indiceTarea">Índice de Tarea:</label>
+        <input type="number" id="indiceTarea" required>
+        
+        <label for="nuevoEstado">Nuevo Estado:</label>
+        <select id="nuevoEstado" required>
+            <option value="pendiente">Pendiente</option>
+            <option value="en progreso">En Progreso</option>
+            <option value="completada">Completada</option>
+            <option value="atrasada">Atrasada</option>
+        </select>
+        
+        <button type="submit">Cambiar Estado</button>
+    </form>
+    
+    <button onclick="verificarPlazos()">Verificar Plazos</button>
+</body>
+</html>
